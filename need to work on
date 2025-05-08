@@ -16,22 +16,24 @@ while True:
     else:
         while True:
             voter_name = (input("Please enter your name: "))
-            all_voters.append(voter_name)
-            print(all_voters)
             if voter_name in all_voters:
                 print("Access denied! You have already voted")
             else:
+                all_voters.append(voter_name)
                 while True:
-                    citizen_status = input("plese enter whether you are a US Citizen or not. (YES or NO)")
+                    citizen_status = input("plese enter whether you are a US Citizen or not.(YES or NO)")
                     if citizen_status != "YES":
                         print("Only US Citizens can vote. Please allow for the next user to proceed.")
                     else:
                         print("You are eligible to vote! Proceeding...")
-                        
+                        pres_choice = input("Choose which part you would like to vote for in the Presidental election. The options are: Democratic, Republican, and Other.")
+                        senate_choice = input()
+                        house_choice = input()
+                        gov_coice = input()
                         
                     break
             break
     break
-print(all_voters)
+
 
 #add another while loop here for citizenship status, YES will move on to voter choices, NO will reject and start from the top ar enter your age (Still need to figure out how to have it go back to the very top at enter your age....) and either we can have it that it check for YES or Yes, or any variation of the capitalization, or more simpler is just have all input be mandated in caps lock. To undertsand the OR operator, google it.
