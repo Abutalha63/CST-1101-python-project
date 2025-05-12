@@ -1,0 +1,50 @@
+all_voters=[]
+president_dem=0
+president_rep=0
+president_green=0
+senator_dem=0
+senator_rep=0
+senator_green=0
+house_dem=0
+house_rep=0
+house_green=0
+gov_dem=0
+gov_rep=0
+gov_green=0
+while True:
+    voter_age = int(input("Please enter your age: "))
+    if voter_age < 18:
+        print("Access denied! Only those 18 years and older may vote.\nStep aside. Next voter, you may now proceed.\n..........")
+        continue
+
+
+    voter_name = (input("Please enter your name: "))
+    if voter_name in all_voters:
+        print("Access denied! You have already voted.\nStep aside. Next voter, you may now proceed.\n..........")
+    else:
+        all_voters.append(voter_name)
+        break
+print("You are eligible to vote! Proceeding...")
+pres_choice = input("Choose which part you would like to vote for in the Presidental election. The options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
+if pres_choice == "1":
+    president_dem = president_dem+1
+elif pres_choice == "2":
+    president_rep = president_rep+1
+elif pres_choice == "3":
+    president_green = president_green+1
+else:
+    print('invalid vote')
+    
+    
+
+print("Presidential vote recorded.")
+    
+    
+senator_choice = input("Please choose party you would like to vote for in Senator election.\nThe options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ") #maybe would have to move vote recorded to seprate line of code
+if senator_choice =="1":
+    senator_dem=senator_dem+1
+elif senator_choice =="2":
+    senator_rep+senator_rep+1
+elif senator_choice == "3":
+    senator_green=senator_green+1
+else:
