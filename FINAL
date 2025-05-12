@@ -1,0 +1,167 @@
+all_voters=["muhammad", "usman", "leah", "wallerson", "test"]
+president_dem=0
+president_rep=0
+president_green=0
+senator_dem=0
+senator_rep=0
+senator_green=0
+house_dem=0
+house_rep=0
+house_green=0
+gov_dem=0
+gov_rep=0
+gov_green=0
+while True:
+    age_or_exit = input("Please enter your age (Or type exit to show election reults): ")
+    if age_or_exit == "exit":
+        print("Showing results now......\n")
+        break
+    voter_age = int(age_or_exit)
+    if voter_age < 18:
+        print("Access denied! Only those 18 years and older may vote.\nStep aside for the next voter.\n\n            ~~~   NEW VOTER   ~~~            \n\n")
+        continue
+
+
+    voter_ssn = (input("Please enter your social Security Number for voter validation: "))
+    if voter_ssn in all_voters:
+        print("Access denied! You have already voted.\nStep aside.            ~~~   NEW VOTER   ~~~            \n\n")
+        continue
+    else:
+        all_voters.append(voter_ssn)
+
+    print("You are eligible to vote! Proceeding...\n")
+    while True:
+        pres_choice = input("Choose which party you would like to vote for in the Presidental election. The options are: 1. Democrat / 2. Republican / 3. Green-party\nPlease input the corresponding number choice: ")
+        if pres_choice == "1":
+            president_dem = president_dem+1
+            print("Democratic presidential vote recorded.\n")
+            break
+        elif pres_choice == "2":
+            president_rep = president_rep+1
+            print("Republican presidential vote recorded.\n")
+            break
+        elif pres_choice == "3":
+            president_green = president_green+1
+            print("Green-party presidential vote recorded.\n")
+            break
+        else:
+            print("Invalid presidential vote. Vote again.\n")
+    while True:
+        senator_choice = input("Please choose party you would like to vote for in Senate election.\nThe options are: 1. Democrat / 2. Republican / 3. Green-party\nPlease input the corresponding number choice: ")
+        if senator_choice =="1":
+            senator_dem =senator_dem+1
+            print("Democratic senate vote recorded.\n")
+            break
+        elif senator_choice =="2":
+            senator_rep=senator_rep+1
+            print("Republican senate vote recorded.\n")
+            break
+        elif senator_choice  =="3":
+            senator_green= senator_green+1
+            print("Green-party senate vote recorded.\n")
+            break
+        else:
+            print("Invalid Senate vote. Vote again.\n")
+    while True:
+        house_choice = input("Please choose party you would like to vote for in election for House of representatives.\nThe options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
+        if house_choice =="1":
+            house_dem = house_dem+1
+            print("Democratic House vote recorded.\n")
+            break
+        elif house_choice =="2":
+            house_rep = house_rep+1
+            print("Republican House vote recorded.\n")
+            break
+        elif house_choice == "3":
+            house_green = house_green +1
+            print("Green-party House vote recorded.\n")
+            break
+        else:
+            print("Invalid House vote. Vote again.\n")
+    while True:
+        gov_choice = input("Please choose party you would like to vote for in the Governor election.\nThe options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
+        if gov_choice == "1":
+            gov_dem=gov_dem+1
+            print("Democratic Governor vote recorded.\n")
+            break
+        elif gov_choice == "2":
+            gov_rep = gov_rep+1
+            print("Republican Governor vote recorded.\n")
+            break
+        elif gov_choice == "3":
+            gov_green = gov_green+1
+            print("Green-party Governor vote recorded.\n")
+            break
+        else:
+            print("Invalid Governor vote. Vote again.\n")
+    print("Thank you, all of your votes have been recorded. You may step aside for the next voter.\n")
+    print("            ~~~   NEW VOTER   ~~~            \n\n")
+
+print("In total,",len(all_voters),"people voted!\n")
+
+print("~~~  Presidential election results  ~~~\n")
+if president_dem > president_green and president_dem > president_rep:
+    print("The Democratic party wins!\n\n")
+elif president_rep > president_green and president_rep > president_dem:
+    print("The Democratic party wins!\n\n")
+elif president_green > president_dem and president_green > president_rep:
+    print("The Democratic party wins!\n\n")
+elif president_dem == president_rep == president_green:
+    print("There is a 3-way tie between the Democratic, Republican and Green parties!!!!!!!!!!!\n\n")
+elif president_dem == president_rep:
+    print("There is a tie between the Democratic and Repulican parties!!!\n\n")
+elif president_dem==president_green:
+    print("There is a tie between the Democratic and Green parties!!!\n\n")
+elif president_rep==president_green:
+    print("There is a tie between the Republican and Green parties!!!\n\n")
+
+    
+
+print("~~~  Senate election results  ~~~\n")
+if senator_dem > senator_green and senator_dem > senator_rep:
+    print("The Democratic party wins!\n\n")
+elif senator_rep > senator_green and senator_rep > senator_dem:
+    print("The Republican party wins!\n\n")
+elif senator_green > senator_dem and senator_green > senator_rep:
+    print("The Green-party party wins!\n\n")
+elif senator_dem == senator_rep == senator_green:
+    print("There is a 3-way tie between the Democratic, Republican and Green parties!!!!!!!!!!!\n\n")
+elif senator_dem == senator_rep:
+    print("There is a tie between the Democratic and Republican parties!!!\n\n")
+elif senator_dem==senator_green:
+    print("There is a tie between the Democratic and Green parties!!!\n\n")
+elif senator_rep==senator_green:
+    print("There is a tie between the Republican and Green parties!!!\n\n")
+
+print("~~~  House of Representatives election results  ~~~\n")
+if house_dem > house_green and house_dem > house_rep:
+    print("The Democratic party wins!\n\n")
+elif house_rep > house_green and house_rep > house_dem:
+    print("The Republican party wins!\n\n")
+elif house_green > house_dem and house_green > house_rep:
+    print("The Green-party party wins!\n\n")
+elif house_dem == house_rep == house_green:
+    print("There is a 3-way tie between the Democratic, Republican and Green parties!!!!!!!!!!!\n\n")
+elif house_dem == house_rep:
+    print("There is a tie between the Democratic and Republican parties!!!\n\n")
+elif house_dem==house_green:
+    print("There is a tie between the Democratic and Green parties!!!\n\n")
+elif house_rep==house_green:
+    print("There is a tie between the Republican and Green parties!!!\n\n")
+    
+    
+print("~~~  Governor election results  ~~~\n")
+if gov_dem > gov_green and gov_dem > gov_rep:
+    print("The Democratic party wins!")
+elif gov_rep > gov_green and gov_rep > gov_dem:
+    print("The Republican party wins!")
+elif gov_green > gov_dem and gov_green > gov_rep:
+    print("The Green-party party wins!")
+elif gov_dem == gov_rep == gov_green:
+    print("There is a 3-way tie between the Democratic, Republican and Green parties!!!!!!!!!!!\n\n")
+elif gov_dem == gov_rep:
+    print("There is a tie between the Democratic and Republican parties!!!\n\n")
+elif gov_dem==gov_green:
+    print("There is a tie between the Democratic and Green parties!!!\n\n")
+elif gov_rep== gov_green:
+    print("There is a tie between the Republican and Green parties!!!\n\n")
