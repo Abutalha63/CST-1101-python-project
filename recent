@@ -30,10 +30,8 @@ if pres_choice == "1":
     president_dem = president_dem+1
 elif pres_choice == "2":
     president_rep = president_rep+1
-elif pres_choice == "3":
-    president_green = president_green+1
 else:
-    print('invalid vote')
+    president_green = president_green+1
     
     
 
@@ -45,6 +43,26 @@ if senator_choice =="1":
     senator_dem=senator_dem+1
 elif senator_choice =="2":
     senator_rep+senator_rep+1
-elif senator_choice == "3":
-    senator_green=senator_green+1
 else:
+    senator_green=senator_green+1
+print("Senate vote recorded.")
+
+house_choice = input("Please choose party you would like to vote for in the election. r House of representatives.\nThe options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
+if house_choice =="1":
+    house_dem = house_dem+1
+elif house_choice =="2":
+    house_rep = house_rep+1
+else:
+    house_green = house_green +1
+
+print("House of representatives vote recorded.")
+
+gov_choice = input("Please choose party you would like to vote for in the election. for House of representatives.\nThe options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
+    
+    
+    
+    
+    
+    
+    
+    
