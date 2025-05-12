@@ -1,4 +1,4 @@
-all_voters=["lol"]
+all_voters=["muhammad", "usman", "leah", "wallerson", "test"]
 president_dem=0
 president_rep=0
 president_green=0
@@ -12,7 +12,6 @@ gov_dem=0
 gov_rep=0
 gov_green=0
 while True:
-    #print("---------- Type exit to show election results.")
     age_input = input("Please enter your age (Or type exit to show election reults): ")
     if age_input == "exit":
         print("Showing relults now......")
@@ -95,11 +94,49 @@ while True:
             break
         else:
             print("Invalid Governor vote. Vote again.")
+    print("         ~~~   NEW VOTER   ~~~         ")
     
 print("~~~  Presidential election results  ~~~")
-if president_dem > president_green and president_rep:
+if president_dem > president_green and president_dem > president_rep:
     print("dem wins")
-elif president_rep > president_green:
+elif president_rep > president_green and president_rep > president_dem:
     print("republican wins")
-else:
+elif president_green > president_dem and president_green > president_rep:
     print("Green wins")
+else:
+    print("tie")
+    
+    
+    
+if senator_dem > senator_green and senator_dem > senator_rep:
+    print("dem wins")
+elif senator_rep > senator_green and senator_rep > senator_dem:
+    print("republican wins")
+elif senator_green > senator_dem and senator_green > senator_rep:
+    print("Green wins")
+else:
+    print("tie")
+    
+    
+if house_dem > house_green and house_dem > house_rep:
+    print("dem wins")
+elif house_rep > house_green and house_rep > house_dem:
+    print("republican wins")
+elif house_green > house_dem and house_green > house_rep:
+    print("Green wins")
+else:
+    print("tie")
+    
+    
+    
+if gov_dem > gov_green and gov_dem > gov_rep:
+    print("dem wins")
+elif gov_rep > gov_green and gov_rep > gov_dem:
+    print("republican wins")
+elif gov_green > gov_dem and gov_green > gov_rep:
+    print("Green wins")
+else:
+    print("tie")
+    
+    
+print("people voted: ", len(all_voters))
