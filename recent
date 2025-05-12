@@ -35,52 +35,66 @@ while True:
         pres_choice = input("Choose which part you would like to vote for in the Presidental election. The options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
         if pres_choice == "1":
             president_dem = president_dem+1
-            print("Democratic vote recorded.")
+            print("Democratic presidential vote recorded.")
+            break
         elif pres_choice == "2":
             president_rep = president_rep+1
-            print("Republican vote recorded.")
+            print("Republican presidential vote recorded.")
+            break
         elif pres_choice == "3":
             president_green = president_green+1
-            print("Green-party vote recorded.")
+            print("Green-party presidential vote recorded.")
+            break
         else:
             print("Invalid presidential vote. Vote again.")
     while True:
-        senator_choice = input("Please choose party you would like to vote for in Senator election.\nThe options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
+        senator_choice = input("Please choose party you would like to vote for in Senate election.\nThe options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
         if senator_choice =="1":
             senator_dem=senator_dem+1
             print("Democartic senate vote recorded.")
+            break
         elif senator_choice =="2":
             senator_rep+senator_rep+1
             print("Republican senate vote recorded.")
+            break
         elif senator_choice == "3":
             senator_green=senator_green+1
             print("Green-party senate vote recorded.")
+            break
         else:
             print("Invalid Senate vote. Vote again.")
     while True:
         house_choice = input("Please choose party you would like to vote for in the election for House of representatives.\nThe options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
         if house_choice =="1":
             house_dem = house_dem+1
+            print("Democratic House vote recorded.")
+            break
         elif house_choice =="2":
             house_rep = house_rep+1
+            print("Republican House vote recorded.")
+            break
         elif house_choice == "3":
             house_green = house_green +1
+            print("Green-party House vote recorded.")
+            break
         else:
             print("Invalid House vote. Vote again.")
-    
-    gov_choice = input("Please choose party you would like to vote for in the election for governor.\nThe options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
-    if gov_choice == "1":
-        gov_dem=gov_dem+1
-    elif gov_choice == "2":
-        gov_rep = gov_rep+1
-    else:
-        gov_green = gov_green+1
-    
-    print("Governorship vote recorded.")
-        
-        
-    
-    print("Presidential vote recorded.")
+    while True:
+        gov_choice = input("Please choose party you would like to vote for in the election for governor.\nThe options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
+        if gov_choice == "1":
+            gov_dem=gov_dem+1
+            print("Democratic Governor vote recorded.")
+            break
+        elif gov_choice == "2":
+            gov_rep = gov_rep+1
+            print("Republican Governor vote recorded.")
+            break
+        elif gov_choice == "3":
+            gov_green = gov_green+1
+            print("Green-party Governor vote recorded.")
+            break
+        else:
+            print("Invalid Governor vote. Vote again.")
     
 print("~~~  Presidential election results  ~~~")
 if president_dem > president_green and president_rep:
