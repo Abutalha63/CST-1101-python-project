@@ -31,37 +31,42 @@ while True:
         all_voters.append(voter_name)
 
     print("You are eligible to vote! Proceeding...")
-    pres_choice = input("Choose which part you would like to vote for in the Presidental election. The options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
-    if pres_choice == "1":
-        president_dem = president_dem+1
-    elif pres_choice == "2":
-        president_rep = president_rep+1
-    else:
-        president_green = president_green+1
-        
-        
-    
-    print("Presidential vote recorded.")
-        
-        
-    senator_choice = input("Please choose party you would like to vote for in Senator election.\nThe options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ") #maybe would have to move vote recorded to seprate line of code
-    if senator_choice =="1":
-        senator_dem=senator_dem+1
-    elif senator_choice =="2":
-        senator_rep+senator_rep+1
-    else:
-        senator_green=senator_green+1
-    print("Senate vote recorded.")
-    
-    house_choice = input("Please choose party you would like to vote for in the election for House of representatives.\nThe options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
-    if house_choice =="1":
-        house_dem = house_dem+1
-    elif house_choice =="2":
-        house_rep = house_rep+1
-    else:
-        house_green = house_green +1
-    
-    print("House of representatives vote recorded.")
+    while True:
+        pres_choice = input("Choose which part you would like to vote for in the Presidental election. The options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
+        if pres_choice == "1":
+            president_dem = president_dem+1
+            print("Democratic vote recorded.")
+        elif pres_choice == "2":
+            president_rep = president_rep+1
+            print("Republican vote recorded.")
+        elif pres_choice == "3":
+            president_green = president_green+1
+            print("Green-party vote recorded.")
+        else:
+            print("Invalid presidential vote. Vote again.")
+    while True:
+        senator_choice = input("Please choose party you would like to vote for in Senator election.\nThe options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
+        if senator_choice =="1":
+            senator_dem=senator_dem+1
+            print("Democartic senate vote recorded.")
+        elif senator_choice =="2":
+            senator_rep+senator_rep+1
+            print("Republican senate vote recorded.")
+        elif senator_choice == "3":
+            senator_green=senator_green+1
+            print("Green-party senate vote recorded.")
+        else:
+            print("Invalid Senate vote. Vote again.")
+    while True:
+        house_choice = input("Please choose party you would like to vote for in the election for House of representatives.\nThe options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
+        if house_choice =="1":
+            house_dem = house_dem+1
+        elif house_choice =="2":
+            house_rep = house_rep+1
+        elif house_choice == "3":
+            house_green = house_green +1
+        else:
+            print("Invalid House vote. Vote again.")
     
     gov_choice = input("Please choose party you would like to vote for in the election for governor.\nThe options are: 1. Democrat / 2. Republican / 3.Green-party\nPlease input the corresponding number choice: ")
     if gov_choice == "1":
@@ -72,9 +77,15 @@ while True:
         gov_green = gov_green+1
     
     print("Governorship vote recorded.")
+        
+        
     
-    print(len(all_voters),"people have voted")
-
+    print("Presidential vote recorded.")
+    
 print("~~~  Presidential election results  ~~~")
 if president_dem > president_green and president_rep:
     print("dem wins")
+elif president_rep > president_green:
+    print("republican wins")
+else:
+    print("Green wins")
