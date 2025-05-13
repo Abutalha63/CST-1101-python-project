@@ -103,9 +103,9 @@ print("~~~  Presidential election results  ~~~\n")
 if president_dem > president_green and president_dem > president_rep:
     print("The Democratic party wins!\n\n")
 elif president_rep > president_green and president_rep > president_dem:
-    print("The Democratic party wins!\n\n")
+    print("The Republican party wins!\n\n")
 elif president_green > president_dem and president_green > president_rep:
-    print("The Democratic party wins!\n\n")
+    print("The Green-party wins!\n\n")
 elif president_dem == president_rep == president_green:
     print("There is a 3-way tie between the Democratic, Republican and Green parties!!!!!!!!!!!\n\n")
 elif president_dem == president_rep:
