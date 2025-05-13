@@ -1,4 +1,4 @@
-all_voters=["muhammad", "usman", "leah", "wallerson", "test"]
+all_voters=[]
 president_dem=0
 president_rep=0
 president_green=0
