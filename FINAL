@@ -97,71 +97,99 @@ while True:
     print("Thank you, all of your votes have been recorded. You may step aside for the next voter.\n")
     print("            ~~~   NEW VOTER   ~~~            \n\n")
 
-print("In total,",len(all_voters),"people voted!\n")
+print("In total,",len(all_voters),"people voted!\n\n")
 
 print("~~~  Presidential election results  ~~~\n")
 if president_dem > president_green and president_dem > president_rep:
-    print("The Democratic party wins!\n\n")
+    print("The Democratic party wins!\n")
+    print("Vote breakdown by party:\nDemocratic:", president_dem,"\nRepublican:", president_rep,"\nGreen-party:",president_green,"\n\n")
 elif president_rep > president_green and president_rep > president_dem:
     print("The Republican party wins!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", president_dem,"\nRepublican:", president_rep,"\nGreen-party:",president_green,"\n\n")
 elif president_green > president_dem and president_green > president_rep:
     print("The Green-party wins!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", president_dem,"\nRepublican:", president_rep,"\nGreen-party:",president_green,"\n\n")
 elif president_dem == president_rep == president_green:
     print("There is a 3-way tie between the Democratic, Republican and Green parties!!!!!!!!!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", president_dem,"\nRepublican:", president_rep,"\nGreen-party:",president_green,"\n\n")
 elif president_dem == president_rep:
     print("There is a tie between the Democratic and Repulican parties!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", president_dem,"\nRepublican:", president_rep,"\nGreen-party:",president_green,"\n\n")
 elif president_dem==president_green:
     print("There is a tie between the Democratic and Green parties!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", president_dem,"\nRepublican:", president_rep,"\nGreen-party:",president_green,"\n\n")
 elif president_rep==president_green:
     print("There is a tie between the Republican and Green parties!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", president_dem,"\nRepublican:", president_rep,"\nGreen-party:",president_green,"\n\n")
 
     
 
 print("~~~  Senate election results  ~~~\n")
 if senator_dem > senator_green and senator_dem > senator_rep:
     print("The Democratic party wins!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", senator_dem,"\nRepublican:", senator_rep,"\nGreen-party:",senator_green,"\n\n")
 elif senator_rep > senator_green and senator_rep > senator_dem:
     print("The Republican party wins!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", senator_dem,"\nRepublican:", senator_rep,"\nGreen-party:",senator_green,"\n\n")
 elif senator_green > senator_dem and senator_green > senator_rep:
     print("The Green-party party wins!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", senator_dem,"\nRepublican:", senator_rep,"\nGreen-party:",senator_green,"\n\n")
 elif senator_dem == senator_rep == senator_green:
     print("There is a 3-way tie between the Democratic, Republican and Green parties!!!!!!!!!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", senator_dem,"\nRepublican:", senator_rep,"\nGreen-party:",senator_green,"\n\n")
 elif senator_dem == senator_rep:
     print("There is a tie between the Democratic and Republican parties!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", senator_dem,"\nRepublican:", senator_rep,"\nGreen-party:",senator_green,"\n\n")
 elif senator_dem==senator_green:
     print("There is a tie between the Democratic and Green parties!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", senator_dem,"\nRepublican:", senator_rep,"\nGreen-party:",senator_green,"\n\n")
 elif senator_rep==senator_green:
     print("There is a tie between the Republican and Green parties!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", senator_dem,"\nRepublican:", senator_rep,"\nGreen-party:",senator_green,"\n\n")
 
 print("~~~  House of Representatives election results  ~~~\n")
 if house_dem > house_green and house_dem > house_rep:
     print("The Democratic party wins!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", house_dem,"\nRepublican:", house_rep,"\nGreen-party:",house_green,"\n\n")
 elif house_rep > house_green and house_rep > house_dem:
     print("The Republican party wins!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", house_dem,"\nRepublican:", house_rep,"\nGreen-party:",house_green,"\n\n")
 elif house_green > house_dem and house_green > house_rep:
     print("The Green-party party wins!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", house_dem,"\nRepublican:", house_rep,"\nGreen-party:",house_green,"\n\n")
 elif house_dem == house_rep == house_green:
     print("There is a 3-way tie between the Democratic, Republican and Green parties!!!!!!!!!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", house_dem,"\nRepublican:", house_rep,"\nGreen-party:",house_green,"\n\n")
 elif house_dem == house_rep:
     print("There is a tie between the Democratic and Republican parties!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", house_dem,"\nRepublican:", house_rep,"\nGreen-party:",house_green,"\n\n")
 elif house_dem==house_green:
     print("There is a tie between the Democratic and Green parties!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", house_dem,"\nRepublican:", house_rep,"\nGreen-party:",house_green,"\n\n")
 elif house_rep==house_green:
     print("There is a tie between the Republican and Green parties!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", house_dem,"\nRepublican:", house_rep,"\nGreen-party:",house_green,"\n\n")
     
-    
+
 print("~~~  Governor election results  ~~~\n")
 if gov_dem > gov_green and gov_dem > gov_rep:
     print("The Democratic party wins!")
+    print("Vote breakdown by party:\nDemocratic:", gov_dem,"\nRepublican:", gov_rep,"\nGreen-party:",gov_green,"\n\n")
 elif gov_rep > gov_green and gov_rep > gov_dem:
     print("The Republican party wins!")
+    print("Vote breakdown by party:\nDemocratic:", gov_dem,"\nRepublican:", gov_rep,"\nGreen-party:",gov_green,"\n\n")
 elif gov_green > gov_dem and gov_green > gov_rep:
     print("The Green-party party wins!")
+    print("Vote breakdown by party:\nDemocratic:", gov_dem,"\nRepublican:", gov_rep,"\nGreen-party:",gov_green,"\n\n")
 elif gov_dem == gov_rep == gov_green:
     print("There is a 3-way tie between the Democratic, Republican and Green parties!!!!!!!!!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", gov_dem,"\nRepublican:", gov_rep,"\nGreen-party:",gov_green,"\n\n")
 elif gov_dem == gov_rep:
     print("There is a tie between the Democratic and Republican parties!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", gov_dem,"\nRepublican:", gov_rep,"\nGreen-party:",gov_green,"\n\n")
 elif gov_dem==gov_green:
     print("There is a tie between the Democratic and Green parties!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", gov_dem,"\nRepublican:", gov_rep,"\nGreen-party:",gov_green,"\n\n")
 elif gov_rep== gov_green:
     print("There is a tie between the Republican and Green parties!!!\n\n")
+    print("Vote breakdown by party:\nDemocratic:", gov_dem,"\nRepublican:", gov_rep,"\nGreen-party:",gov_green,"\n\n")
